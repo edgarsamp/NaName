@@ -35,7 +35,7 @@ int main (){
 				}
 	}
 	for (i = 0; i < n; i++)
-		printf("%s\n", Parede[i]+1);
+		printf("%s\n", Parede[i]);
 
  return 0;
 }
