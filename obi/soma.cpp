@@ -27,15 +27,15 @@ int main(){
         soma[i] = soma[i-1] + seq[i];
 
     for (l = 0; l < n; l++)
-        for (int r = l; r < n; r++)
-            if(sum(l, r) == k)
-                res++;
-                while(seq[l+1] == 0 && l+1 < n){
-                    res++;
-                    l++;
-                }
+        if (soma [l] > k && l > 0){
+            for (int i = l; i < n; i++){
+                soma [i]-=soma[l];
+            }
+        }
+    for (l = 0; l < n; l++)
+        if (soma[l] == k)
+            res++;
                 
-
     cout << res << "\n";
 
     return 0;
