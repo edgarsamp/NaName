@@ -22,14 +22,16 @@ int main (){
 						escorreu = true;
 					}else 
 						if (Parede [i+1][j] == '#'){
-							if (Parede [i][j+1] == '.'){
-								Parede [i][j+1] = 'o';
-								escorreu = true;
-							}
-							if (Parede [i][j-1] == '.'){
-								Parede [i][j-1] = 'o';
-								escorreu = true;
-							}
+							if (j < m-1)
+								if (Parede [i][j+1] == '.'){
+									Parede [i][j+1] = 'o';
+									escorreu = true;
+								}
+							if (j > 0)
+								if (Parede [i][j-1] == '.'){
+									Parede [i][j-1] = 'o';
+									escorreu = true;
+								}
 						}
 					
 				}
