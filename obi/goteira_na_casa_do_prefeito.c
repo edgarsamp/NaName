@@ -8,7 +8,7 @@ int main (){
  bool escorreu = true;
 	scanf ("%hd %hd ", &n, &m);
 	char Parede [n][m+1];
-	for (i = 0; i <= n; i++){
+	for (i = 0; i < n; i++){
 		scanf ("%s", Parede [i]);
 		Parede [i][m] = 0;
 	}
